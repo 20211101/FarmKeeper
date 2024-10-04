@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 액션(공격)
 public class Weapon_Club : Tool
 {
     Animator anim;

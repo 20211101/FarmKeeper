@@ -3,18 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Wave Controller에게서 만들 몬스터 정보 가져와서 몬스터 만들어줌
 public class Spawner : MonoBehaviour
 {
     [SerializeField]
+    // 스폰 하고서 이동 할 경로(중앙)
     Transform[] path1 = new Transform[2];
     [SerializeField]
+    // 스폰 하고서 이동 할 경로(바깥)
     Transform[] path2 = new Transform[2];
 
     [SerializeField]
     Transform spawnPos;
 
+    // 몬스터 만들어주는 녀석
     MonsterPool pool;
+    // 생성된 몬스터
     Stack<GameObject> spawnedMonster = new Stack<GameObject>();
+    // 생성된 몬스터(타입)
     Stack<Monster.MonsterType> typeStack = new Stack<Monster.MonsterType>();
 
     private void Start()

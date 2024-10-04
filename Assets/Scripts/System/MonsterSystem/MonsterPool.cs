@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 오브젝트 풀링(몬스터)
 public class MonsterPool : MonoBehaviour
 {
     private static MonsterPool _instance;

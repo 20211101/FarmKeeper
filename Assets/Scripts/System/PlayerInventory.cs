@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 플레이어가 가지는 자원 관리
 public class PlayerInventory : MonoBehaviour
 {
     public Resource[] resources = new Resource[(int)Resource.EType.TypeCnt]

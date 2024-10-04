@@ -5,7 +5,7 @@ using UnityEngine;
 // TODO : ÇöÀç ³·/¹ãÀÎÁö¿Í ½Ã°£ÀÇ Èå¸§ UI·Î ¶ç¿ì±â
 public class Timer : MonoBehaviour
 {
-    private static Timer _instance;
+    private static Timer _instance = null;
     public static Timer instance => _instance;
 
 

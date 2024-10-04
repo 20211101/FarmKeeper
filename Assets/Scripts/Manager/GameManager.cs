@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// 게임의 시작과 끝을 관리
 public class GameManager : MonoBehaviour
 {
     [SerializeField]

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tree : ResourceOrigin
 {
-    Resource r = new Resource(Resource.EType.Wood, 5);
+    static Resource r = new Resource(Resource.EType.Wood, 5);
     public override void Damaged(PlayerInventory playerInventory)
     {
         Debug.Log("¾Æ¾æ");
@@ -24,7 +24,6 @@ public class Tree : ResourceOrigin
             transform.localScale -= new Vector3(0.01f, 0, 0);
             yield return null;
         }
-            transform.localScale = new Vector3(1, 1, 1);
-
+        transform.localScale = new Vector3(1, 1, 1);
     }
 }

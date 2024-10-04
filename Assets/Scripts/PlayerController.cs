@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// 이동
 public class PlayerController : MonoBehaviour
 {
     CharacterController controller;
@@ -17,17 +18,6 @@ public class PlayerController : MonoBehaviour
         cam = Camera.main;
     }
 
-    // 방망이 공격
-    void Attack()
-    {
-        Debug.Log(gameObject.name);
-        Debug.DrawLine(transform.position, transform.position + new Vector3(0, 0, 5), Color.red, 3, true);
-        RaycastHit[] hits;
-        hits = Physics.BoxCastAll(transform.position , Quaternion.Euler(transform.forward) * new Vector3(0.0112f, 0.6984f, 0.521f), transform.forward, Quaternion.identity
-            , 1);
-        foreach (RaycastHit i in hits)
-            Debug.Log(i.collider.gameObject.name);
-    }
 
     Vector3 groundDir;
     void Update()

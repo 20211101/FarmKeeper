@@ -6,8 +6,11 @@ public struct SpawnInfo
 {
     public SpawnInfo(int idx, Monster.MonsterType t, int amount)
     {
+        // 어느 포탈에서 소환하는지
         spawnerIdx = idx;
+        // 소환 할 몬스터 타입
         type = t;
+        // 소환 할 몬스터 수
         spawnAmount = amount;
     }
     public int spawnerIdx;
@@ -15,6 +18,8 @@ public struct SpawnInfo
     public int spawnAmount;
 }
 
+
+// 밤 되면 타이머 델리게이트로 알아서 몬스터 만들어줌
 public class WaveControll : MonoBehaviour
 {
     [SerializeField]
@@ -35,13 +40,16 @@ public class WaveControll : MonoBehaviour
     {
         Debug.Log("SpawnMonster 실행");
 
-        SpawnInfo[] info = GetSpawnInfoByWave();
+        // 소환 정보 받아오기
+        SpawnInfo[] info = GetSpawnInfoByWave(); 
+        // 포탈에 명령 할 명령 데이터
         Stack<Monster.MonsterType> spawnStack1 = new Stack<Monster.MonsterType>();
         Stack<Monster.MonsterType> spawnStack2 = new Stack<Monster.MonsterType>();
         
         foreach(SpawnInfo i in info)
         {
             Stack<Monster.MonsterType> targetStack;
+            // 어떤 포탈에 몬스터 추가할 지 분기문
             switch(i.spawnerIdx)
             {
                 case 0:
