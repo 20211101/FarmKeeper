@@ -23,11 +23,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, cam.transform.eulerAngles.y, transform.eulerAngles.z);
+
+        float xInput = Input.GetAxisRaw("Horizontal");
+        float zInput = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("xInput", xInput);
+        anim.SetFloat("zInput", zInput);
         
-        anim.SetFloat("xInput", InputManager.xInput);
-        anim.SetFloat("zInput", InputManager.zInput);
-        
-        groundDir = new Vector3(InputManager.xInput, 0, InputManager.zInput).normalized;
+        groundDir = new Vector3(xInput, 0, zInput).normalized;
         
         controller.Move((transform.rotation * groundDir) * speed * Time.deltaTime);
     }

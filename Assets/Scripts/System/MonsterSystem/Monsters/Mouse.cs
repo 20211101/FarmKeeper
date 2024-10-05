@@ -16,6 +16,7 @@ public class Mouse : Monster
 
     private void Awake()
     {
+        BaseAwake();
         type = MonsterType.MOUSE;
 
         anim = GetComponent<Animator>();
@@ -24,6 +25,7 @@ public class Mouse : Monster
 
         resetDel += () => colider.enabled = true;
 
+        MAX_HP = (int)MonsterHP.MOUSE;
         hp = (int)MonsterHP.MOUSE;
         meatAmount = (int)MonsterMeatAmount.MOUSE;
     }

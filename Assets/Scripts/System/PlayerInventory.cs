@@ -23,9 +23,10 @@ public class PlayerInventory : MonoBehaviour
         Debug.Log($"타입 : {resource.type}, {resource.cnt}개 추가됨");
     }
 
+    // 도구를 이 타입으로 바꿀 수 있는지 확인하는 함수
     internal bool CanGet(Tool.type t)
     {
-        if (tools[(int)t] != null) return true;
+        if (tools[(int)t] != null && tools[(int)t].toolCnt > 0) return true;
         else return false;
     }
 

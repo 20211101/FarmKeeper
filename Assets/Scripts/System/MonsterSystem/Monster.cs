@@ -30,7 +30,10 @@ public class Monster : MonoBehaviour
     public ResetDel resetDel;
     Spawner parentSpawner;
 
+    protected int MAX_HP = 100;
+    public int MaxHp { get => MAX_HP; private set { } }
     protected int hp = 100;
+    public int Hp { get => hp; private set { } }
     protected bool isDying = false;
     protected bool isAttacking = false;
     protected bool canAttack = false;
@@ -39,6 +42,10 @@ public class Monster : MonoBehaviour
     protected MonsterMovement movement;
 
     private void Awake()
+    {
+        movement = GetComponent<MonsterMovement>();
+    }
+    protected void BaseAwake()
     {
         movement = GetComponent<MonsterMovement>();
     }

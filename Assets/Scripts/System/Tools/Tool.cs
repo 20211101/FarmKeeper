@@ -9,11 +9,16 @@ public class Tool : MonoBehaviour
     {
         Club = 0,
         Spear,
+        Granade,
         TypeCnt
     }
 
     public type toolType;
-    public int toolCnt { get; set; }
+    private int _toolCnt = 0;
+    public int toolCnt { get=>_toolCnt; 
+        set { _toolCnt = value; 
+            InventoryToolPannelUI.instance.ChangeToolCount((int)toolType, _toolCnt); } 
+    }
 
     public virtual void Action()
     {

@@ -9,11 +9,12 @@ public class Weapon_Club : Tool
     [SerializeField]
     GameObject hitBox;
     bool _isAttacking = false;
-    bool isAttacking { get { return _isAttacking; } set { Debug.Log(value); _isAttacking = value; } }
+    bool isAttacking { get { return _isAttacking; } set {_isAttacking = value; } }
 
     private void Awake()
     {
         anim = GetComponent<Animator>();
+        toolCnt = 1;
     }
 
     public override void Action()
@@ -24,10 +25,12 @@ public class Weapon_Club : Tool
             return;
         }
         if (isAttacking)
+        {
             return;
+        }
         
-        isAttacking = true;
         anim.SetTrigger("Attack");
+        isAttacking = true;
     }
     public override void Setting()
     {
@@ -37,7 +40,6 @@ public class Weapon_Club : Tool
     {
         anim.SetLayerWeight(1, 0);
         StopCoroutine(nameof(OffBox));
-        isAttacking = false;
         hitBox.SetActive(false);
         isAttacking = false;
     }

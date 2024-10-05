@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+[System.Serializable]
 public class Resource
 {
 
@@ -27,5 +27,6 @@ public class Resource
         cnt = c;
     }
     public EType type;
-    public int cnt { get; set; }
+
+    public int cnt = 0;
 }
