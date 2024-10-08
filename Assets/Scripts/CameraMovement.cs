@@ -64,12 +64,12 @@ public class CameraMovement : MonoBehaviour
 
 
     }
-
+    int mask = (1 << 3) | (1 << 9);
     float finalDistance;
     void SetPosition()
     {
         RaycastHit hit;
-        Physics.Raycast(player.position, -transform.forward, out hit, distanceOffset, LayerMask.NameToLayer("Player"));
+        Physics.Raycast(player.position, -transform.forward, out hit, distanceOffset, ~mask);
 
         if (hit.collider != null) finalDistance = hit.distance;
         else finalDistance = distanceOffset;

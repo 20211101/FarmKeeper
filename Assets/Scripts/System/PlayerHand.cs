@@ -57,12 +57,14 @@ public class PlayerHand : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
             ChangeTool(Tool.type.Club);
         if (Input.GetKeyDown(KeyCode.Alpha2))
             ChangeTool(Tool.type.Spear);
         if (Input.GetKeyDown(KeyCode.Alpha3))
             ChangeTool(Tool.type.Granade);
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+            ChangeTool(Tool.type.SlingTurret);
         if (Input.GetMouseButtonDown(0))
             Action();
     }

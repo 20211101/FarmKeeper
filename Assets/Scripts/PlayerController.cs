@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
 
     Vector3 groundDir;
+    public LayerMask msk;
     void Update()
     {
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, cam.transform.eulerAngles.y, transform.eulerAngles.z);

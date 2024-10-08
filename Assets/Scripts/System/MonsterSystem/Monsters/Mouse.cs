@@ -7,9 +7,11 @@ public class Mouse : Monster
     [SerializeField]
     GameObject minimapMark;
 
-    int damage = 4;
+    int damage = 2;
+    int barrigateDamage = 3;
+    int storageDamage = 8;
     float atkDelay = 0.5f;
-    Structure target = null;
+    Damagable target = null;
     Animator anim;
     MeshRenderer[] mesh;
     CapsuleCollider colider;
@@ -69,11 +71,19 @@ public class Mouse : Monster
             movement.StartMoving();
             return;
         }
+        if(target is Structure)
+        {
+            if(target.CompareTag("Storage"))
+                target.Damaged(storageDamage);
+            else
+                target.Damaged(barrigateDamage);
 
-        target.Damaged(damage);
+        }
+        else
+            target.Damaged(damage);
     }
 
-    public void StartAttack(Structure s)
+    public void StartAttack(Damagable s)
     {
         target = s;
         canAttack = true;

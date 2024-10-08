@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class Monster : Damagable
 {
     public enum MonsterType
     {
@@ -14,9 +14,9 @@ public class Monster : MonoBehaviour
 
     public enum MonsterHP
     {
-        MOUSE = 100,
-        MALL = 120,
-        RABBIT = 150
+        MOUSE = 10,
+        MALL = 20,
+        RABBIT = 30
     }
     public enum MonsterMeatAmount
     {
@@ -24,16 +24,19 @@ public class Monster : MonoBehaviour
         MALL = 12,
         RABBIT = 15
     }
+
+    public enum MonsterState
+    {
+        Move,
+        Attack,
+        Die
+    }
     
     public MonsterType type;
     public delegate void ResetDel();
     public ResetDel resetDel;
     Spawner parentSpawner;
 
-    protected int MAX_HP = 100;
-    public int MaxHp { get => MAX_HP; private set { } }
-    protected int hp = 100;
-    public int Hp { get => hp; private set { } }
     protected bool isDying = false;
     protected bool isAttacking = false;
     protected bool canAttack = false;
@@ -58,7 +61,7 @@ public class Monster : MonoBehaviour
         movement.StartMoving();
     }
 
-    public virtual void Damaged(int damage)
+    public override void Damaged(int damage)
     {
         throw new NotImplementedException();
     }

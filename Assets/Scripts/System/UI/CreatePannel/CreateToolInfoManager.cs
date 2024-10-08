@@ -13,12 +13,20 @@ public class CreateToolInfoManager : MonoBehaviour
     TextMeshProUGUI description;
     [SerializeField]
     ResourcePrintControll_CreatePannel resourceInfo;
+    [SerializeField]
+    Button createButton;
 
-    public void ShowToolInfo(ToolUI_Create info)
+    public void ShowToolInfo(ToolUI_Create info, bool canBuy)
     {
-        toolImg = info.ToolImg;
+        toolImg.sprite = info.ToolImg.sprite;
         toolName.text = info.Recipy.toolName;
         description.text = info.Description;
         resourceInfo.PrintResources(info.Recipy);
+        createButton.interactable = canBuy;
+    }
+
+    public void ButtonEnableCheck(bool canBuy)
+    {
+        createButton.interactable = canBuy;
     }
 }

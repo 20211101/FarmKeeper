@@ -10,6 +10,7 @@ public class Tool : MonoBehaviour
         Club = 0,
         Spear,
         Granade,
+        SlingTurret,
         TypeCnt
     }
 

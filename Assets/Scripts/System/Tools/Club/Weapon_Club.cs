@@ -14,6 +14,9 @@ public class Weapon_Club : Tool
     private void Awake()
     {
         anim = GetComponent<Animator>();
+    }
+    private void Start()
+    {
         toolCnt = 1;
     }
 

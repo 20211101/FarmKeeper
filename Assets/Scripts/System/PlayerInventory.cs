@@ -17,9 +17,14 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField]
     Tool[] tools = new Tool[(int)Tool.type.TypeCnt];
 
+    public delegate void GetResourceDel();
+    public event GetResourceDel getResourceDel;
+
     public void GetResource(Resource resource)
     {
         resources[(int)resource.type].cnt += resource.cnt;
+        if (getResourceDel != null)
+            getResourceDel();
         Debug.Log($"타입 : {resource.type}, {resource.cnt}개 추가됨");
     }
 

@@ -15,7 +15,7 @@ public class MouseMovement : MonsterMovement
 
     private void Update(){
         if (isMoving == false) return;
-        if(target == null || target == null){
+        if(target == null){
             Debug.Log("타겟 미설정 오류");
             return;
         }

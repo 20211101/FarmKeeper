@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
-public class MonsterHpUI : MonoBehaviour
+public class DamagableHpUI : MonoBehaviour
 {
     [SerializeField]
     Image hpBar;
-    
+
     [SerializeField]
-    Monster monster;
+    Damagable monster;
 
     private void Update()
     {
