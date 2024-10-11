@@ -14,6 +14,8 @@ public class Resource
         Steal,
         Meat,
         Leather,
+        Coin,
+        TNTPowder,
         TypeCnt
     }
     public Resource(EType _type, int c = 0)

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class SlingTurret : Structure
 {
-
-    [SerializeField] GameObject bullet;
-
     [SerializeField] GameObject yAxis;
 
     [SerializeField] GameObject zAxis;
@@ -37,18 +34,18 @@ public class SlingTurret : Structure
             return;
         }
 
-        float dist = 0f;
+        float dist = 10000f;
         foreach(Collider c in colliders)
         {
             float temp = (c.transform.position -transform.position).sqrMagnitude;
-            if (temp > dist)
+            if (temp < dist)
             {
                 target = c.GetComponent<Monster>();
                 dist = temp;
             }
         }
 
-        if (dist == 0f)
+        if (dist == 10000f)
             target = null;
     }
 
@@ -69,7 +66,12 @@ public class SlingTurret : Structure
     {
         if (canAttack == false) return;
         canAttack = false;
-        Instantiate(bullet, zAxis.transform.position, zAxis.transform.rotation);
+        GameObject bullet = BulletPool.instance.SendBullet(BulletType.Rock);
+        bullet.transform.position = zAxis.transform.position;
+        bullet.transform.rotation = zAxis.transform.rotation;
+        bullet.SetActive(true);
+        bullet.GetComponent<Bullet_Rock>().maker = gameObject;
+        
         StartCoroutine("Wait");
     }
 

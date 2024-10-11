@@ -3,36 +3,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum RecipyType
+{
+    Tool,
+    Resource
+}
 [System.Serializable]
 public class ToolRecipy
 {
-    public ToolRecipy(string name, Tool.type t, Resource[] c)
-    { toolName = name; toolType = t; cost = c; }
+    public ToolRecipy(RecipyType recipy, string name, Tool.type t, Resource.EType resT, int _resourceCount, Resource[] c)
+    { recipyT = recipy; toolName = name; toolType = t; resourceType = resT; resourceCount = _resourceCount; cost = c; }
+    public RecipyType recipyT;
     public string toolName;
     public Tool.type toolType;
+    public Resource.EType resourceType;
+    public int resourceCount;
     public Resource[] cost;
 }
 
 public class ToolCreator : MonoBehaviour
 {
     PlayerInventory inventory;
-
-    ToolRecipy[] recipies = new ToolRecipy[]
-    {
-        new ToolRecipy("¸ùµÕÀÌ", Tool.type.Club, new Resource[]{new Resource(Resource.EType.Wood,10) })
-    };
-
-    public void Make(Tool.type t)
-    {
-        if (CanMake(recipies[(int)t].cost) == false) return;
-
-        foreach (Resource i in recipies[(int)t].cost)
-        {
-            inventory.resources[(int)i.type].cnt -= i.cnt;
-        }
-
-        inventory.MakeTool(t);
-    }
 
     private bool CanMake(Resource[] cost)
     {

@@ -39,7 +39,7 @@ public class GranadePhysics : MonoBehaviour
     {
         if(other.CompareTag("Monster"))
         {
-            other.GetComponent<Monster>().Damaged(damage);
+            other.GetComponent<Monster>().Damaged(new DamageInfo(damage, null));
         }
     }
 }

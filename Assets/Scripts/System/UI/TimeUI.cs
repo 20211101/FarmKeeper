@@ -14,9 +14,9 @@ public class TimeUI : MonoBehaviour
     private void Update()
     {
         if (timer.IsDay)
-            timeText.text = $"[DAY {timer.DAY_CNT}]\nMORNIG {timer.MORNING_TIME - timer.CUR_DAY_TIME:F0}";
+            timeText.text = $"[DAY {timer.DAY_CNT + 1}]\nMORNIG {timer.MORNING_TIME - timer.CUR_DAY_TIME:F0}";
         else
-            timeText.text = $"[DAY {timer.DAY_CNT}]\nNIGHT {timer.DAY_FULL_TIME - timer.CUR_DAY_TIME:F0}";
+            timeText.text = $"[DAY {timer.DAY_CNT + 1}]\nNIGHT {timer.DAY_FULL_TIME - timer.CUR_DAY_TIME:F0}";
 
     }
 }

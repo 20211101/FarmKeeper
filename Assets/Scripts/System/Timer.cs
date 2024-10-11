@@ -13,7 +13,7 @@ public class Timer : MonoBehaviour
     
     public float MORNING_TIME = 12.0f;
     
-    public float NIGHT_TIME = 120.0f;
+    public float NIGHT_TIME = 25.0f;
 
     public float DAY_FULL_TIME => MORNING_TIME + NIGHT_TIME;
     public int DAY_CNT => (int)absTime / (int)DAY_FULL_TIME;
@@ -53,7 +53,7 @@ public class Timer : MonoBehaviour
     {
         isStartGame = false;
         isDay = true;
-        absTime = MORNING_TIME;
+        absTime = 0;
 
         dayStart = null;
         nightStart = null;
@@ -89,6 +89,12 @@ public class Timer : MonoBehaviour
         {
             if (isDay == false)
             {
+                if (DAY_CNT == 15)
+                {
+                    isStartGame = false;
+                    GameManager.instance.Win();
+                    return;
+                }
                 RenderSettings.skybox = skyboxMornig;
                 RenderSettings.fogDensity = 0f;
                 isDay = true;

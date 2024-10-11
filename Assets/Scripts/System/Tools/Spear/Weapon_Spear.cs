@@ -45,6 +45,7 @@ public class Weapon_Spear : Tool
         GameObject temp = Instantiate(Spear);
         temp.transform.position = SpawnPos.position;
         temp.GetComponent<SpearPhysics>().AddForce(transform.forward);
+        temp.GetComponent<SpearPhysics>().maker = gameObject;
         StartCoroutine(nameof(AtkDelay));
 
         toolCnt--;

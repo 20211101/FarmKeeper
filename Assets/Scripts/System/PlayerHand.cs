@@ -18,6 +18,7 @@ public class PlayerHand : MonoBehaviour
     GameObject activatedTool;
     Tool selectedTool;
     PlayerInventory inventory;
+    PlayerHealth playerHealth;
 
     public Tool.type selectedToolType => selectedTool.toolType;
 
@@ -27,6 +28,7 @@ public class PlayerHand : MonoBehaviour
             _instance = this;
         else
             Destroy(gameObject);
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     private void Start()
@@ -57,6 +59,7 @@ public class PlayerHand : MonoBehaviour
 
     private void Update()
     {
+        if (playerHealth.isFallen == true) return;
         if (Input.GetKeyDown(KeyCode.Alpha1))
             ChangeTool(Tool.type.Club);
         if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -65,6 +68,20 @@ public class PlayerHand : MonoBehaviour
             ChangeTool(Tool.type.Granade);
         if (Input.GetKeyDown(KeyCode.Alpha4))
             ChangeTool(Tool.type.SlingTurret);
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+            ChangeTool(Tool.type.BowTurret);
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+            ChangeTool(Tool.type.MortarTurret);
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+            ChangeTool(Tool.type.AirTurret);
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+            ChangeTool(Tool.type.StickyFloor);
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+            ChangeTool(Tool.type.Barricade);
+        if (Input.GetKeyDown(KeyCode.Q))
+            ChangeTool(Tool.type.Potion);
+        if (Input.GetKeyDown(KeyCode.E))
+            ChangeTool(Tool.type.RestoreKit);
         if (Input.GetMouseButtonDown(0))
             Action();
     }

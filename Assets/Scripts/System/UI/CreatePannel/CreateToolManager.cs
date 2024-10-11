@@ -29,8 +29,10 @@ public class CreateToolManager : MonoBehaviour
             inventory.resources[(int)i.type].cnt -= i.cnt;
         }
 
-        inventory.MakeTool(showingTool.Recipy.toolType);
-
+        if(showingTool.Recipy.recipyT == RecipyType.Tool)
+            inventory.MakeTool(showingTool.Recipy.toolType);
+        else
+            inventory.GetResource(new Resource(showingTool.Recipy.resourceType, showingTool.Recipy.resourceCount));
         infoManage.ButtonEnableCheck(CanBuy(showingTool.Recipy.cost));  
     }
 

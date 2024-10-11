@@ -17,6 +17,10 @@ public class InventoryUI : MonoBehaviour
     TextMeshProUGUI meatTxt;
     [SerializeField]
     TextMeshProUGUI leatherTxt;
+    [SerializeField]
+    TextMeshProUGUI coinTxt;
+    [SerializeField]
+    TextMeshProUGUI TXTPowderTxt;
 
     void Update()
     {
@@ -31,5 +35,7 @@ public class InventoryUI : MonoBehaviour
         stealTxt.text = $"{playerInventory.resources    [(int)Resource.EType.Steal].cnt}";
         meatTxt.text = $"{playerInventory.resources     [(int)Resource.EType.Meat].cnt}";
         leatherTxt.text = $"{playerInventory.resources  [(int)Resource.EType.Leather].cnt}";
+        coinTxt.text = $"{playerInventory.resources  [(int)Resource.EType.Coin].cnt}";
+        TXTPowderTxt.text = $"{playerInventory.resources  [(int)Resource.EType.TNTPowder].cnt}";
     }
 }

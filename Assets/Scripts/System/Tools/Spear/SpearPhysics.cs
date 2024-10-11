@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SpearPhysics : MonoBehaviour
 {
+    public GameObject maker;
     Rigidbody rigid;
     public float damageIncreaseRate = 0.1f;
     public bool hit = false;
@@ -37,7 +38,7 @@ public class SpearPhysics : MonoBehaviour
         {
             float rate = damageIncreaseRate;
             int damage = (int)Mathf.Clamp(rigid.velocity.magnitude, MIN_DAMAGE, MAX_DAMAGE);
-            collision.gameObject.GetComponent<Monster>().Damaged(damage);
+            collision.gameObject.GetComponent<Monster>().Damaged(new DamageInfo(damage, maker));
         }
         rigid.velocity = Vector3.zero;
     }

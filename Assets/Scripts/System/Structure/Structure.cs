@@ -6,14 +6,19 @@ using UnityEngine;
 public class Structure : Damagable
 {
     public BuildArea builtedArea;
-    public override void Damaged(int damage)
+    public override void Damaged(DamageInfo damage)
     {
-        hp -= damage;
+        hp -= damage.damage;
         if (hp <= 0)
         {
-            if (builtedArea != null)
-                builtedArea.state = BuildArea.State.emety;
-            gameObject.SetActive(false);
+            Destroying();
         }
+    }
+
+    public virtual void Destroying()
+    {
+        if (builtedArea != null)
+            builtedArea.state = BuildArea.State.emety;
+        gameObject.SetActive(false);
     }
 }

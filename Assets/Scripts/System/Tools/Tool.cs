@@ -11,6 +11,14 @@ public class Tool : MonoBehaviour
         Spear,
         Granade,
         SlingTurret,
+        BowTurret,
+        MortarTurret,
+        AirTurret,
+        StickyFloor,
+        Barricade,
+        C4,
+        Potion,
+        RestoreKit,
         TypeCnt
     }
 

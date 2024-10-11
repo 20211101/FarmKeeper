@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     CharacterController controller;
+    PlayerHealth playerHealth;
     Animator anim;
 
     Camera cam;
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         controller = GetComponent<CharacterController>();
+        playerHealth = GetComponent<PlayerHealth>();
         anim = GetComponent<Animator>();
         cam = Camera.main;
     }
@@ -23,6 +25,8 @@ public class PlayerController : MonoBehaviour
     public LayerMask msk;
     void Update()
     {
+        if (playerHealth.isFallen == true) return;
+
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, cam.transform.eulerAngles.y, transform.eulerAngles.z);
 
         float xInput = Input.GetAxisRaw("Horizontal");

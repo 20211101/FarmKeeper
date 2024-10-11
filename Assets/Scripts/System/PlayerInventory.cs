@@ -12,7 +12,9 @@ public class PlayerInventory : MonoBehaviour
             new Resource(Resource.EType.Stone),
             new Resource(Resource.EType.Steal),
             new Resource(Resource.EType.Meat),
-            new Resource(Resource.EType.Leather)
+            new Resource(Resource.EType.Leather),
+            new Resource(Resource.EType.Coin),
+            new Resource(Resource.EType.TNTPowder)
         };
     [SerializeField]
     Tool[] tools = new Tool[(int)Tool.type.TypeCnt];
