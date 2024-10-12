@@ -11,11 +11,13 @@ public class TradeUITrigger : MonoBehaviour
     {
         if (other.CompareTag("Player") == false) return;
         TradeUI.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     private void OnTriggerExit(Collider other)
     {
         TradeUI.SetActive(false);
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
