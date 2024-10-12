@@ -17589,7 +17589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 705507994}
-  MORNING_TIME: 1
+  MORNING_TIME: 120
   NIGHT_TIME: 120
   skyboxNight: {fileID: 2100000, guid: 3876d0e183013044aab5adba683217d7, type: 2}
 --- !u!4 &542616780
@@ -26576,12 +26576,13 @@ GameObject:
   - component: {fileID: 797625796}
   - component: {fileID: 797625798}
   - component: {fileID: 797625797}
+  - component: {fileID: 797625799}
   m_Layer: 0
   m_Name: stone mountain (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &797625796
 Transform:
@@ -26647,6 +26648,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797625795}
+  m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
+--- !u!64 &797625799
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797625795}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &800066486
 GameObject:
@@ -28534,7 +28557,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &834476477
@@ -65027,7 +65050,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &1663869031
@@ -71558,7 +71581,7 @@ Transform:
   m_GameObject: {fileID: 1838445496}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1087, y: 3.72, z: 2.7}
+  m_LocalPosition: {x: -1124.3, y: 3.72, z: -8.7}
   m_LocalScale: {x: 7.8, y: 36.6, z: 93.6}
   m_ConstrainProportionsScale: 0
   m_Children:
