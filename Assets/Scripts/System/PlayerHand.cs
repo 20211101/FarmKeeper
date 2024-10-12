@@ -78,6 +78,8 @@ public class PlayerHand : MonoBehaviour
             ChangeTool(Tool.type.StickyFloor);
         if (Input.GetKeyDown(KeyCode.Alpha9))
             ChangeTool(Tool.type.Barricade);
+        if (Input.GetKeyDown(KeyCode.Alpha0))
+            ChangeTool(Tool.type.C4);
         if (Input.GetKeyDown(KeyCode.Q))
             ChangeTool(Tool.type.Potion);
         if (Input.GetKeyDown(KeyCode.E))

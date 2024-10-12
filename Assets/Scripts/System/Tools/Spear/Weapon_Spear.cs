@@ -16,10 +16,6 @@ public class Weapon_Spear : Tool
     {
         anim = GetComponent<Animator>();
     }
-    private void Start()
-    {
-        toolCnt = 100;
-    }
 
     public override void Action()
     {

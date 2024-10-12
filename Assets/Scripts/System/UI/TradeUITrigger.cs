@@ -9,6 +9,7 @@ public class TradeUITrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Player") == false) return;
         TradeUI.SetActive(true);
     }
 

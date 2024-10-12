@@ -47,4 +47,14 @@ public class PlayerInventory : MonoBehaviour
         tools[(int)t].Setting();
         return tools[(int)t];
     }
+
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.transform.CompareTag("ResourcePrab"))
+        {
+            GetResource(hit.transform.GetComponent<ResourcePickUp>().resource);
+            Destroy(hit.gameObject);
+        }
+    }
 }

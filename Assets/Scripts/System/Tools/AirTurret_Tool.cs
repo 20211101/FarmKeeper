@@ -15,7 +15,6 @@ public class AirTurret_Tool : Tool
     bool isOnHand = false;
     private void Start()
     {
-        toolCnt = 3;
         grid.SetActive(false);
         debugBall.SetActive(false);
         Turret.SetActive(false);

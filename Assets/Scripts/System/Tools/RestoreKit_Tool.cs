@@ -14,10 +14,6 @@ public class RestoreKit_Tool : Tool
     {
         anim = GetComponent<Animator>();
     }
-    private void Start()
-    {
-        toolCnt = 1;
-    }
 
     public override void Action()
     {

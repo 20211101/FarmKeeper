@@ -126,9 +126,13 @@ public class WaveControll : MonoBehaviour
         }
 
         if (spawnStack1.Count > 0)
-            spawners[0].StartSpawn(spawnStack1);
+        {
+            if(spawners[0].IsClosed != true)
+                spawners[0].StartSpawn(spawnStack1);
+        }
         if (spawnStack2.Count > 0)
-            spawners[1].StartSpawn(spawnStack2);
+            if (spawners[1].IsClosed != true)
+                spawners[1].StartSpawn(spawnStack2);
     }
 
     private SpawnInfo[] GetSpawnInfoByWave()

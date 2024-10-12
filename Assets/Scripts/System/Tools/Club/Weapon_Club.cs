@@ -54,6 +54,7 @@ public class Weapon_Club : Tool
         StartCoroutine(nameof(OffBox));
     }
 
+
     IEnumerator OffBox()
     {
         yield return new WaitForSeconds(0.1f);

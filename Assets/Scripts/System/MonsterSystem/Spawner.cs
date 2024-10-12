@@ -6,6 +6,13 @@ using UnityEngine;
 // Wave Controller에게서 만들 몬스터 정보 가져와서 몬스터 만들어줌
 public class Spawner : MonoBehaviour
 {
+    private bool isClosed = false;
+    public bool IsClosed { get => isClosed; }
+    public void Close()
+    {
+        isClosed = true;
+        GetComponent<MeshRenderer>().enabled = false;
+    }
     [SerializeField]
     // 스폰 하고서 이동 할 경로(중앙)
     Transform[] path1 = new Transform[2];

@@ -6,10 +6,6 @@ public class Potion_Tool : Tool
 {
     [SerializeField] GameObject healEffect;
     int healAmount = 20;
-    private void Start()
-    {
-        toolCnt = 100;
-    }
 
     public override void Action()
     {

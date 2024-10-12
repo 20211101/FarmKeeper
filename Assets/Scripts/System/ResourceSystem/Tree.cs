@@ -42,5 +42,20 @@ public class Tree : ResourceOrigin
             yield return null;
         }
         transform.localScale = new Vector3(1, 1, 1);
+        Diactivate();
+    }
+
+    [SerializeField]
+    GameObject respawnCanvas;
+    public override void Respone()
+    {
+        GetComponent<MeshRenderer>().enabled = true;
+        GetComponent<CapsuleCollider>().enabled = true;
+    }
+    public override void Diactivate()
+    {
+        respawnCanvas.SetActive(true);
+        GetComponent<MeshRenderer>().enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
     }
 }

@@ -11,6 +11,7 @@ TagManager:
   - Collide
   - BuildArea
   - Terrain
+  - ResourcePrab
   layers:
   - Default
   - TransparentFX

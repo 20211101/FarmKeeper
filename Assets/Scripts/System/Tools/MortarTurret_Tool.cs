@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Barricade_Tool : Tool
+public class MortarTurret_Tool : Tool
 {
     [SerializeField]
     GameObject grid;
