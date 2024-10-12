@@ -6,18 +6,25 @@ public class BulletMortar : MonoBehaviour
 {
     Vector3 startPos;
     [SerializeField] float radious = 10f;
+    [SerializeField] GameObject explodeEffect;
     int damage = 10;
     public GameObject maker;
+    Rigidbody rigid;
 
     private void Awake()
     {
+        rigid = GetComponent<Rigidbody>();
         startPos = transform.position;
+    }
+    private void Update()
+    {
+        rigid.velocity += new Vector3(0, -10, 0) * Time.deltaTime;
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Terrain"))
         {
-
+            Instantiate(explodeEffect, transform.position + new Vector3(0,1,0), Quaternion.identity);
             Collider[] colliders = Physics.OverlapSphere(transform.position, radious, 1<<9);
             foreach(Collider c in colliders)
             {

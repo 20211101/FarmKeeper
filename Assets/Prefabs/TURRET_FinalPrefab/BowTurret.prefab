@@ -937,7 +937,7 @@ MonoBehaviour:
   yAxis: {fileID: 152715536670870303}
   zAxis: {fileID: 152715536670870303}
   spawnPos: {fileID: 4272859521634821777}
-  radious: 25
+  radious: 100
   monsterLayer:
     serializedVersion: 2
     m_Bits: 512

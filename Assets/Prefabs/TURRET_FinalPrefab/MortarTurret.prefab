@@ -214,14 +214,14 @@ MonoBehaviour:
   builtedArea: {fileID: 0}
   yAxis: {fileID: 8301775281379384924}
   zAxis: {fileID: 779840394566921501}
-  radious: 15
+  radious: 75
   monsterLayer:
     serializedVersion: 2
     m_Bits: 512
   bullet: {fileID: 2563313519977687866, guid: 1f63d4af2dcdaae4f9ac97246a2186d3, type: 3}
   bulletSpawnPos: {fileID: 3223091461603670395}
   bulletSpawnDir: {fileID: 1111565401271947613}
-  pow: 10
+  pow: 25
 --- !u!1 &1111565401271947613
 GameObject:
   m_ObjectHideFlags: 0

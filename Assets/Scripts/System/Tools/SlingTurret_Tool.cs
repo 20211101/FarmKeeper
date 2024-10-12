@@ -15,6 +15,7 @@ public class SlingTurret_Tool : Tool
     bool isOnHand = false;
     private void Start()
     {
+        toolCnt = 10;
         grid.SetActive(false);
         debugBall.SetActive(false);
         Turret.SetActive(false);

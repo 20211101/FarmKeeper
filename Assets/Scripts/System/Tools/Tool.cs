@@ -23,9 +23,10 @@ public class Tool : MonoBehaviour
     }
 
     public type toolType;
-    private int _toolCnt = 0;
+    public int _toolCnt = 0;
     public int toolCnt { get=>_toolCnt; 
-        set { _toolCnt = value; 
+        set { 
+            _toolCnt = value; 
             InventoryToolPannelUI.instance.ChangeToolCount((int)toolType, _toolCnt); } 
     }
 

@@ -25,7 +25,7 @@ public class SpearPhysics : MonoBehaviour
         damageIncreaseRate += 0.1f * Time.deltaTime;
 
         Vector3 v = rigid.velocity * (3 * Time.deltaTime);
-        rigid.velocity += new Vector3(v.x, -0.002f, v.z);
+        rigid.velocity += new Vector3(v.x, -0.05f, v.z);
         transform.rotation = Quaternion.LookRotation(rigid.velocity.normalized);
     }
 

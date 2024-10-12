@@ -149,7 +149,7 @@ public class Rabbit : Monster
     {
         if (isDying) return;
 
-        if (damage.damager.CompareTag("Player"))
+        if (damage.damager != null && damage.damager.CompareTag("Player"))
         {
             trackPlayer = true;
             StopCoroutine(nameof(TrackPlayerDuration));

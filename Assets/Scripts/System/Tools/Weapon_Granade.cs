@@ -12,7 +12,7 @@ public class Weapon_Granade : Tool
     bool _isAttacking = false;
     bool isAttacking { get { return _isAttacking; } set { Debug.Log(value); _isAttacking = value; } }
 
-    private void Awake()
+    private void Start()
     {
         toolCnt = 100;
         anim = GetComponent<Animator>();

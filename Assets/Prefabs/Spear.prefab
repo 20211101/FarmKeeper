@@ -226,7 +226,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.68, y: 8.07, z: 6.28}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 8, y: 8, z: 8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2982727477990334226}
@@ -271,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75b1694fb91c4ec45a433ab32b2a580f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maker: {fileID: 0}
   damageIncreaseRate: 0.1
   hit: 0
   force: 25
@@ -283,7 +284,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8304339421812696828}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5dbfb995bef332143b6b2949208a6764, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -295,5 +296,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.1, y: 0.1, z: 0.5}
-  m_Center: {x: 0, y: -0.06, z: -0.21}
+  m_Size: {x: 0.1, y: 0.1, z: 1.3140349}
+  m_Center: {x: 0, y: -0.06, z: -0.6170175}
