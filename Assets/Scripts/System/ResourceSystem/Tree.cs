@@ -8,7 +8,12 @@ public class Tree : ResourceOrigin
     private GameObject treeResourcePrefab; // 나무 자원 프리팹
     [SerializeField]
     private Transform spawnPoint; // 나무 자원 생성 위치
+    Vector3 originScale;
 
+    private void Awake()
+    {
+        originScale = transform.localScale;
+    }
     public override void Damaged(PlayerInventory playerInventory)
     {
         Debug.Log("나무를 때렸습니다.");
@@ -31,17 +36,17 @@ public class Tree : ResourceOrigin
 
     IEnumerator ScaleMove()
     {
-        while (transform.localScale.x < 1.2f)
+        while (transform.localScale.x < originScale.x + 0.2f)
         {
             transform.localScale += new Vector3(0.01f, 0, 0);
             yield return null;
         }
-        while (transform.localScale.x > 1f)
+        while (transform.localScale.x > originScale.x)
         {
             transform.localScale -= new Vector3(0.01f, 0, 0);
             yield return null;
         }
-        transform.localScale = new Vector3(1, 1, 1);
+        transform.localScale = originScale;
         Diactivate();
     }
 

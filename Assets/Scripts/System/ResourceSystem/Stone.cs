@@ -12,6 +12,11 @@ public class Stone : ResourceOrigin
     [SerializeField]
     [Range(0, 100)]
     private int steelDropPercent = 50; // 철 자원 드롭 확률
+    Vector3 originScale;
+    private void Awake()
+    {
+        originScale = transform.localScale;
+    }
 
     public override void Damaged(PlayerInventory playerInventory)
     {
@@ -55,18 +60,17 @@ public class Stone : ResourceOrigin
 
     IEnumerator ScaleMove()
     {
-        // 돌 크기 조정 애니메이션
-        while (transform.localScale.x < 1.2f)
+        while (transform.localScale.x < originScale.x + 0.2f)
         {
             transform.localScale += new Vector3(0.01f, 0, 0);
             yield return null;
         }
-        while (transform.localScale.x > 1f)
+        while (transform.localScale.x > originScale.x)
         {
             transform.localScale -= new Vector3(0.01f, 0, 0);
             yield return null;
         }
-        transform.localScale = new Vector3(1, 1, 1);
+        transform.localScale = originScale;
         Diactivate();
     }
 
