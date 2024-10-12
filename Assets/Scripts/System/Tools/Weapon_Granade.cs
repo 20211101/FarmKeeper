@@ -14,6 +14,7 @@ public class Weapon_Granade : Tool
 
     private void Awake()
     {
+        toolCnt = 100;
         anim = GetComponent<Animator>();
     }
 

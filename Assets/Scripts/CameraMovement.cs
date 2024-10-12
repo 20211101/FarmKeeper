@@ -21,7 +21,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Awake()
     {
-        distanceOffset = Vector3.Distance(player.position, transform.position);
+        distanceOffset = Vector3.Distance(Vector3.zero, new Vector3(0,6.59f,-10));
         distanceMaxOffset = distanceOffset;
     }
 

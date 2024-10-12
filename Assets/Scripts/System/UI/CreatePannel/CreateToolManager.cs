@@ -12,7 +12,12 @@ public class CreateToolManager : MonoBehaviour
 
     private void Start()
     {
-        inventory.getResourceDel += () => infoManage.ButtonEnableCheck(CanBuy(showingTool.Recipy.cost));
+
+        inventory.getResourceDel += () =>
+        {
+            if (showingTool == null) return;
+            infoManage.ButtonEnableCheck(CanBuy(showingTool.Recipy.cost));
+        };
     }
 
     public void ShowInfo(ToolUI_Create info)
