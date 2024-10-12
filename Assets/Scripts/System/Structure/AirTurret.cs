@@ -13,7 +13,6 @@ public class AirTurret : Structure
     [SerializeField] LayerMask monsterLayer;
 
     Monster target;
-
     private void Update()
     {
         FindTarget();
