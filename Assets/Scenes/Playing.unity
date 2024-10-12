@@ -6617,6 +6617,7 @@ GameObject:
   - component: {fileID: 236918059}
   - component: {fileID: 236918058}
   - component: {fileID: 236918060}
+  - component: {fileID: 236918061}
   m_Layer: 0
   m_Name: stone mountain (10)
   m_TagString: Untagged
@@ -6708,9 +6709,30 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
+--- !u!65 &236918061
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236918056}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.0670903, y: 6.4337916, z: 3.161892}
+  m_Center: {x: -0.5681236, y: -1.9513755, z: 1.5012857}
 --- !u!1 &237062262
 GameObject:
   m_ObjectHideFlags: 0
@@ -56672,7 +56694,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &1561235743
