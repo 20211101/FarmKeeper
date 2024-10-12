@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
         Player.SetActive(false);
         timer.ResetTimer();
         GameoverPannel.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.Confined;
     }
     public void Win()
     {
@@ -51,6 +53,7 @@ public class GameManager : MonoBehaviour
         WinPannel.SetActive(true);
         if(gameClear != null)
             gameClear();
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void Restart()

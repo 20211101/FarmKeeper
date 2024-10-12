@@ -6616,12 +6616,13 @@ GameObject:
   - component: {fileID: 236918057}
   - component: {fileID: 236918059}
   - component: {fileID: 236918058}
+  - component: {fileID: 236918060}
   m_Layer: 0
   m_Name: stone mountain (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &236918057
 Transform:
@@ -6687,6 +6688,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236918056}
+  m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
+--- !u!64 &236918060
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236918056}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &237062262
 GameObject:
@@ -8662,12 +8685,13 @@ GameObject:
   - component: {fileID: 291518132}
   - component: {fileID: 291518134}
   - component: {fileID: 291518133}
+  - component: {fileID: 291518135}
   m_Layer: 0
   m_Name: stone mountain (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &291518132
 Transform:
@@ -8733,6 +8757,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291518131}
+  m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
+--- !u!64 &291518135
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291518131}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &294932366
 GameObject:
@@ -9234,12 +9280,13 @@ GameObject:
   - component: {fileID: 312566417}
   - component: {fileID: 312566419}
   - component: {fileID: 312566418}
+  - component: {fileID: 312566420}
   m_Layer: 0
   m_Name: stone mountain (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &312566417
 Transform:
@@ -9305,6 +9352,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312566416}
+  m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
+--- !u!64 &312566420
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312566416}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1001 &317635913
 PrefabInstance:
@@ -17182,12 +17251,13 @@ GameObject:
   - component: {fileID: 538703424}
   - component: {fileID: 538703426}
   - component: {fileID: 538703425}
+  - component: {fileID: 538703427}
   m_Layer: 0
   m_Name: stone mountain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &538703424
 Transform:
@@ -17253,6 +17323,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538703423}
+  m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
+--- !u!64 &538703427
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 538703423}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &538961478
 GameObject:
@@ -28328,12 +28420,13 @@ GameObject:
   - component: {fileID: 830505845}
   - component: {fileID: 830505847}
   - component: {fileID: 830505846}
+  - component: {fileID: 830505848}
   m_Layer: 0
   m_Name: stone mountain (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &830505845
 Transform:
@@ -28399,6 +28492,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830505844}
+  m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
+--- !u!64 &830505848
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830505844}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &834476477
 GameObject:
@@ -46258,12 +46373,13 @@ GameObject:
   - component: {fileID: 1331385872}
   - component: {fileID: 1331385874}
   - component: {fileID: 1331385873}
+  - component: {fileID: 1331385875}
   m_Layer: 0
   m_Name: stone mountain (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1331385872
 Transform:
@@ -46329,6 +46445,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1331385871}
+  m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
+--- !u!64 &1331385875
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331385871}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &1334279543
 GameObject:
@@ -64775,12 +64913,13 @@ GameObject:
   - component: {fileID: 1663741506}
   - component: {fileID: 1663741508}
   - component: {fileID: 1663741507}
+  - component: {fileID: 1663741509}
   m_Layer: 0
   m_Name: stone mountain (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1663741506
 Transform:
@@ -64846,6 +64985,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1663741505}
+  m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
+--- !u!64 &1663741509
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663741505}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
   m_Mesh: {fileID: -867831117174098781, guid: 5329140efad317f4696a85d3ba264c5a, type: 3}
 --- !u!1 &1663869031
 GameObject:
@@ -74466,7 +74627,7 @@ Transform:
   m_GameObject: {fileID: 1912936483}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.9, y: 2.1, z: -15.6}
+  m_LocalPosition: {x: 26.55, y: 2.1, z: -24.04}
   m_LocalScale: {x: 4, y: 2, z: 2.4}
   m_ConstrainProportionsScale: 0
   m_Children:
