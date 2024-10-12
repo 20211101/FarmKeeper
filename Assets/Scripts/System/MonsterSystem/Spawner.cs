@@ -21,24 +21,22 @@ public class Spawner : MonoBehaviour
     // 생성된 몬스터
     Stack<GameObject> spawnedMonster = new Stack<GameObject>();
     // 생성된 몬스터(타입)
-    Stack<Monster.MonsterType> typeStack = new Stack<Monster.MonsterType>();
+    Stack<SpawnInfo_Spawner> typeStack = new Stack<SpawnInfo_Spawner>();
 
     private void Start()
     {
         pool = MonsterPool.instance;
     }
 
-    public void StartSpawn(Stack<Monster.MonsterType> spawnStack)
+    public void StartSpawn(Stack<SpawnInfo_Spawner> spawnStack)
     {
         if(pool == null) pool = MonsterPool.instance;
 
         while (spawnStack.Count > 0)
         {
             typeStack.Push(spawnStack.Pop());
-            GameObject monster = pool.GetMonster(typeStack.Peek());
-           
-            monster.GetComponent<Monster>().Setting(this);
-           
+            GameObject monster = pool.GetMonster(typeStack.Peek().type);
+            monster.GetComponent<Monster>().spawnInfo = typeStack.Peek();
             spawnedMonster.Push(monster);
         }
         StartCoroutine(nameof(DelaySpawn));
@@ -49,19 +47,35 @@ public class Spawner : MonoBehaviour
         {
             m.SetActive(true);
             m.transform.position = spawnPos.position;
-            if(UnityEngine.Random.Range(0, 2) == 0)
-                m.GetComponent<Monster>().BringLife(path1);
-            else
-                m.GetComponent<Monster>().BringLife(path2);
-            yield return new WaitForSeconds (0.5f);
+
+            Monster mon = m.GetComponent<Monster>();
+            if(mon.spawnInfo.movingRoot == 0)
+                mon.BringLife(path2);
+            if(mon.spawnInfo.movingRoot == 1)
+                mon.BringLife(path1);
+            yield return new WaitForSeconds (mon.spawnInfo.delay);
         }
 
     }
     internal void ReturnAllMonsters()
     {
-        for(int i = 0; i < spawnedMonster.Count; ++i)
+        foreach (GameObject m in spawnedMonster)
         {
-            pool.CollectMonster(spawnedMonster.Pop(), typeStack.Pop());
+            m.GetComponent<Monster>().RunAway(); ;
+        }
+        StartCoroutine(nameof(BackToPool));
+    }
+
+    IEnumerator BackToPool()
+    {
+        yield return new WaitForSeconds(5);
+        foreach (GameObject m in spawnedMonster)
+        {
+            m.SetActive(false);
+        }
+        for (int i = 0; i < spawnedMonster.Count; ++i)
+        {
+            pool.CollectMonster(spawnedMonster.Pop(), typeStack.Pop().type);
         }
     }
 }

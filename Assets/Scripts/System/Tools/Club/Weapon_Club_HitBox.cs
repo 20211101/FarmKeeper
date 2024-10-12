@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon_Club_HitBox : MonoBehaviour
 {
     PlayerInventory playerInventory;
-    int damage = 100;
+    int damage = 1;
     private void Awake()
     {
         playerInventory = GetComponentInParent<PlayerInventory>();
@@ -16,7 +16,7 @@ public class Weapon_Club_HitBox : MonoBehaviour
         if(other.tag == "Monster")
         {
             Monster m = other.GetComponent<Monster>();
-            m.Damaged(damage);
+            m.Damaged(new DamageInfo(damage, playerInventory.gameObject));
         }
         if(other.tag == "ResourceOrigin")
         {

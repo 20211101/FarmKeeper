@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [System.Serializable]
 public class Resource
 {
@@ -13,6 +14,8 @@ public class Resource
         Steal,
         Meat,
         Leather,
+        Coin,
+        TNTPowder,
         TypeCnt
     }
 

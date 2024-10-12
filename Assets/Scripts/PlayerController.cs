@@ -6,6 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     CharacterController controller;
+    PlayerHealth playerHealth;
     Animator anim;
 
     Camera cam;
@@ -14,20 +15,26 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         controller = GetComponent<CharacterController>();
+        playerHealth = GetComponent<PlayerHealth>();
         anim = GetComponent<Animator>();
         cam = Camera.main;
     }
 
 
     Vector3 groundDir;
+    public LayerMask msk;
     void Update()
     {
+        if (playerHealth.isFallen == true) return;
+
         transform.rotation = Quaternion.Euler(transform.eulerAngles.x, cam.transform.eulerAngles.y, transform.eulerAngles.z);
+
+        float xInput = Input.GetAxisRaw("Horizontal");
+        float zInput = Input.GetAxisRaw("Vertical");
+        anim.SetFloat("xInput", xInput);
+        anim.SetFloat("zInput", zInput);
         
-        anim.SetFloat("xInput", InputManager.xInput);
-        anim.SetFloat("zInput", InputManager.zInput);
-        
-        groundDir = new Vector3(InputManager.xInput, 0, InputManager.zInput).normalized;
+        groundDir = new Vector3(xInput, 0, zInput).normalized;
         
         controller.Move((transform.rotation * groundDir) * speed * Time.deltaTime);
     }

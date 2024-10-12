@@ -9,10 +9,10 @@ public class MonsterPool : MonoBehaviour
     private static MonsterPool _instance;
     public static MonsterPool instance { get { return _instance; } private set { } }
 
-    const int MAXIMUM_POOL = 100;
+    const int MAXIMUM_POOL = 50;
 
     [SerializeField] GameObject mouse;
-    [SerializeField] GameObject mall;
+    [SerializeField] GameObject mole;
     [SerializeField] GameObject rabbit;
 
     Stack<GameObject> mouseStack = new Stack<GameObject>(MAXIMUM_POOL);
@@ -36,7 +36,7 @@ public class MonsterPool : MonoBehaviour
         }
         for (i = 0; i < MAXIMUM_POOL; i++)
         {
-            temp = Instantiate(mall);
+            temp = Instantiate(mole);
             temp.SetActive(false);
             mallStack.Push(temp);
         }
@@ -58,7 +58,7 @@ public class MonsterPool : MonoBehaviour
             case Monster.MonsterType.MOUSE:
                 temp = mouseStack.Pop();
                 break;
-            case Monster.MonsterType.MALL:
+            case Monster.MonsterType.MOLE:
                 temp = mallStack.Pop();
                 break;
             case Monster.MonsterType.RABBIT:
@@ -79,7 +79,7 @@ public class MonsterPool : MonoBehaviour
             case Monster.MonsterType.MOUSE:
                 mouseStack.Push(m);
                 break;
-            case Monster.MonsterType.MALL:
+            case Monster.MonsterType.MOLE:
                 mallStack.Push(m);
                 break;
             case Monster.MonsterType.RABBIT:

@@ -9,6 +9,8 @@ TagManager:
   - Turret
   - Storage
   - Collide
+  - BuildArea
+  - Terrain
   layers:
   - Default
   - TransparentFX
@@ -18,11 +20,11 @@ TagManager:
   - UI
   - Main
   - Minimap
-  - 
-  - 
-  - 
-  - 
-  - 
+  - AtkTool
+  - Monster
+  - Turret
+  - Storage
+  - Spawner
   - 
   - 
   - 

@@ -3,64 +3,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Monster : MonoBehaviour
+public class Monster : Damagable
 {
     public enum MonsterType
     {
         MOUSE,
-        MALL,
+        MOLE,
         RABBIT
     }
 
     public enum MonsterHP
     {
-        MOUSE = 100,
-        MALL = 120,
-        RABBIT = 150
+        MOUSE = 10,
+        MOLE = 20,
+        RABBIT = 30
     }
     public enum MonsterMeatAmount
     {
         MOUSE = 10,
-        MALL = 12,
+        MOLE = 12,
         RABBIT = 15
     }
-    
+
+    public SpawnInfo_Spawner spawnInfo;
     public MonsterType type;
     public delegate void ResetDel();
-    public ResetDel resetDel;
     Spawner parentSpawner;
 
-    protected int hp = 100;
     protected bool isDying = false;
-    protected bool isAttacking = false;
-    protected bool canAttack = false;
     protected int meatAmount = 3;
 
-    protected MonsterMovement movement;
 
-    private void Awake()
+
+    public virtual void BringLife(Transform[] paths)
     {
-        movement = GetComponent<MonsterMovement>();
     }
 
-    public void BringLife(Transform[] paths)
-    {
-        if(movement == null)
-            movement = GetComponent<MonsterMovement>();
-        movement.SetTarget(paths);
-        movement.StartMoving();
-    }
-
-    public virtual void Damaged(int damage)
+    public override void Damaged(DamageInfo damage)
     {
         throw new NotImplementedException();
     }
 
 
-    public void Setting(Spawner spawner)
-    {
-        parentSpawner = spawner;
-    }
     protected virtual void Dead()
     {
 
@@ -69,12 +53,8 @@ public class Monster : MonoBehaviour
     {
 
     }
-    protected virtual void Attack()
-    {
 
-    }
-
-    public virtual void ResetSelf()
+    public virtual void ResetSelf(Transform[] paths)
     {
         switch(type)
         {
@@ -82,9 +62,16 @@ public class Monster : MonoBehaviour
                 hp = 100;
                 break;
         }
-        resetDel();
-        isAttacking = false;
-        canAttack = false;
         isDying = false;
+    }
+
+    public virtual void RunAway()
+    {
+        throw new NotImplementedException();
+    }
+
+    public virtual void Push(Vector3 dir)
+    {
+
     }
 }

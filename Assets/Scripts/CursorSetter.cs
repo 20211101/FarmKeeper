@@ -6,6 +6,9 @@ public class CursorSetter : MonoBehaviour
 {
     private void Awake()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
+
+
 }

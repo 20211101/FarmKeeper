@@ -12,20 +12,28 @@ public class PlayerInventory : MonoBehaviour
             new Resource(Resource.EType.Stone),
             new Resource(Resource.EType.Steal),
             new Resource(Resource.EType.Meat),
-            new Resource(Resource.EType.Leather)
+            new Resource(Resource.EType.Leather),
+            new Resource(Resource.EType.Coin),
+            new Resource(Resource.EType.TNTPowder)
         };
     [SerializeField]
     Tool[] tools = new Tool[(int)Tool.type.TypeCnt];
 
+    public delegate void GetResourceDel();
+    public event GetResourceDel getResourceDel;
+
     public void GetResource(Resource resource)
     {
         resources[(int)resource.type].cnt += resource.cnt;
+        if (getResourceDel != null)
+            getResourceDel();
         Debug.Log($"타입 : {resource.type}, {resource.cnt}개 추가됨");
     }
 
+    // 도구를 이 타입으로 바꿀 수 있는지 확인하는 함수
     internal bool CanGet(Tool.type t)
     {
-        if (tools[(int)t] != null) return true;
+        if (tools[(int)t] != null && tools[(int)t].toolCnt > 0) return true;
         else return false;
     }
 
