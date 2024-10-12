@@ -1,12 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
+[System.Serializable]
 public class Resource
 {
-
     public enum EType
     {
         Wood = 0,
@@ -16,16 +15,22 @@ public class Resource
         Leather,
         TypeCnt
     }
+
+    public EType type;
+
+    [SerializeField]
+    public int cnt;
+
+    // »ý¼ºÀÚ
     public Resource(EType _type, int c = 0)
     {
         type = _type;
         cnt = c;
     }
+
     public Resource(int c = 0)
     {
         type = EType.Wood;
         cnt = c;
     }
-    public EType type;
-    public int cnt { get; set; }
 }
