@@ -80,7 +80,7 @@ public class Timer : MonoBehaviour
             if (isDay != false)
             {
                 RenderSettings.skybox = skyboxNight;
-                RenderSettings.fogDensity = 0.03f;
+                RenderSettings.fogDensity = 0.01f;
                 isDay = false;
                 nightStart();
             }
