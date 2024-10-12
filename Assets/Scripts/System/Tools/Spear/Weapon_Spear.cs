@@ -17,6 +17,11 @@ public class Weapon_Spear : Tool
         anim = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        toolCnt =0;
+    }
+
     public override void Action()
     {
         if (isAttacking)

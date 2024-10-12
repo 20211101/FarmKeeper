@@ -10,7 +10,7 @@ public class InventoryToolPannelUI : MonoBehaviour
 
 
     [SerializeField]
-    ToolUI[] toolUIs = new ToolUI[10];
+    ToolUI[] toolUIs = new ToolUI[(int)Tool.type.TypeCnt];
     [SerializeField]
     PlayerHand hand;
 
