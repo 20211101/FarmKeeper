@@ -22930,8 +22930,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 705507994}
-  MORNING_TIME: 120
-  NIGHT_TIME: 120
+  MORNING_TIME: 60
+  NIGHT_TIME: 60
   skyboxNight: {fileID: 2100000, guid: 3876d0e183013044aab5adba683217d7, type: 2}
 --- !u!4 &542616780
 Transform:
@@ -23452,16 +23452,328 @@ MonoBehaviour:
       movingRoot: 0
       type: 0
       delay: 1
-  spawnInfo6: []
-  spawnInfo7: []
-  spawnInfo8: []
-  spawnInfo9: []
-  spawnInfo10: []
-  spawnInfo11: []
-  spawnInfo12: []
-  spawnInfo13: []
-  spawnInfo14: []
-  spawnInfo15: []
+  spawnInfo6:
+  - spawnerIdx: 0
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 2
+  - spawnerIdx: 1
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 1
+      type: 1
+      delay: 1
+  - spawnerIdx: 0
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 2
+  - spawnerIdx: 1
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 1
+      type: 1
+      delay: 1
+  spawnInfo7:
+  - spawnerIdx: 0
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 1
+  - spawnerIdx: 0
+    spawnAmount: 7
+    infoSpawner:
+      movingRoot: 0
+      type: 2
+      delay: 3
+  - spawnerIdx: 1
+    spawnAmount: 25
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 0.5
+  - spawnerIdx: 1
+    spawnAmount: 25
+    infoSpawner:
+      movingRoot: 1
+      type: 0
+      delay: 0.5
+  spawnInfo8:
+  - spawnerIdx: 0
+    spawnAmount: 60
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.4
+  - spawnerIdx: 1
+    spawnAmount: 60
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.4
+  spawnInfo9:
+  - spawnerIdx: 0
+    spawnAmount: 50
+    infoSpawner:
+      movingRoot: 1
+      type: 0
+      delay: 0.4
+  - spawnerIdx: 1
+    spawnAmount: 50
+    infoSpawner:
+      movingRoot: 1
+      type: 0
+      delay: 0.4
+  - spawnerIdx: 0
+    spawnAmount: 10
+    infoSpawner:
+      movingRoot: 1
+      type: 2
+      delay: 1
+  - spawnerIdx: 1
+    spawnAmount: 10
+    infoSpawner:
+      movingRoot: 1
+      type: 2
+      delay: 1
+  spawnInfo10:
+  - spawnerIdx: 0
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 1
+      type: 2
+      delay: 1
+  - spawnerIdx: 1
+    spawnAmount: 50
+    infoSpawner:
+      movingRoot: 1
+      type: 1
+      delay: 0.5
+  - spawnerIdx: 1
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 1
+  spawnInfo11:
+  - spawnerIdx: 0
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.5
+  - spawnerIdx: 0
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 1
+      type: 1
+      delay: 0.5
+  - spawnerIdx: 1
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.5
+  - spawnerIdx: 1
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 1
+      type: 1
+      delay: 0.5
+  - spawnerIdx: 0
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 0.5
+  - spawnerIdx: 0
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 1
+      type: 0
+      delay: 0.5
+  - spawnerIdx: 1
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 0.5
+  - spawnerIdx: 1
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 1
+      type: 0
+      delay: 0.5
+  - spawnerIdx: 0
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 0
+      type: 2
+      delay: 0.5
+  - spawnerIdx: 1
+    spawnAmount: 15
+    infoSpawner:
+      movingRoot: 0
+      type: 2
+      delay: 0.5
+  spawnInfo12:
+  - spawnerIdx: 0
+    spawnAmount: 17
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 0.4
+  - spawnerIdx: 0
+    spawnAmount: 17
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.4
+  - spawnerIdx: 0
+    spawnAmount: 17
+    infoSpawner:
+      movingRoot: 0
+      type: 2
+      delay: 0.4
+  - spawnerIdx: 1
+    spawnAmount: 17
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 0.4
+  - spawnerIdx: 1
+    spawnAmount: 17
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.4
+  - spawnerIdx: 1
+    spawnAmount: 17
+    infoSpawner:
+      movingRoot: 0
+      type: 2
+      delay: 0.4
+  spawnInfo13:
+  - spawnerIdx: 0
+    spawnAmount: 70
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.2
+  spawnInfo14:
+  - spawnerIdx: 1
+    spawnAmount: 50
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 0.2
+  - spawnerIdx: 1
+    spawnAmount: 100
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.1
+  spawnInfo15:
+  - spawnerIdx: 0
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 1
+  - spawnerIdx: 0
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.5
+  - spawnerIdx: 0
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 1
+      type: 1
+      delay: 1
+  - spawnerIdx: 0
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.5
+  - spawnerIdx: 1
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0
+  - spawnerIdx: 1
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 0
+      type: 1
+      delay: 0.6
+  - spawnerIdx: 1
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 1
+      type: 1
+      delay: 1
+  - spawnerIdx: 1
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 1
+      type: 1
+      delay: 0.6
+  - spawnerIdx: 0
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 1
+  - spawnerIdx: 0
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 1
+      type: 0
+      delay: 1
+  - spawnerIdx: 1
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 0
+      type: 0
+      delay: 1
+  - spawnerIdx: 1
+    spawnAmount: 30
+    infoSpawner:
+      movingRoot: 1
+      type: 0
+      delay: 1
+  - spawnerIdx: 0
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 0
+      type: 2
+      delay: 1
+  - spawnerIdx: 0
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 1
+      type: 2
+      delay: 1
+  - spawnerIdx: 1
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 0
+      type: 2
+      delay: 1
+  - spawnerIdx: 1
+    spawnAmount: 20
+    infoSpawner:
+      movingRoot: 1
+      type: 2
+      delay: 1
   spawners:
   - {fileID: 1838445501}
   - {fileID: 2089593845}
