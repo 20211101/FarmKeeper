@@ -214,7 +214,7 @@ MonoBehaviour:
   builtedArea: {fileID: 0}
   yAxis: {fileID: 8301775281379384924}
   zAxis: {fileID: 779840394566921501}
-  radious: 75
+  radious: 150
   monsterLayer:
     serializedVersion: 2
     m_Bits: 512
