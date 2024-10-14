@@ -53,7 +53,7 @@ public class MortarTurret : Structure
                 target = c.GetComponent<Monster>();
                 dist = temp;
             }
-        }
+        } 
 
         if (dist == 10000f)
             target = null;

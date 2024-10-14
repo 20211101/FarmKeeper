@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class CameraMovement : MonoBehaviour
 {
+    public static float rayDist = 50;
+
     [SerializeField] Transform player;
     // 시작 시 초기화, 휠 스크롤에 따라 증감
     float distanceOffset;                           // 카메라 거리 기본값

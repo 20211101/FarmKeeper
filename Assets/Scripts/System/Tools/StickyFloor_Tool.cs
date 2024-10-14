@@ -24,7 +24,7 @@ public class StickyFloor_Tool : Tool
     {
         if (isOnHand == false) return;
         RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position + new Vector3(0, 4, 0), Camera.main.transform.forward, out hit, 30f))
+        if (Physics.Raycast(Camera.main.transform.position + new Vector3(0, 4, 0), Camera.main.transform.forward, out hit, CameraMovement.rayDist))
         {
             if (hit.collider.CompareTag("BuildArea"))
             {
@@ -48,7 +48,7 @@ public class StickyFloor_Tool : Tool
     {
         if (isOnHand == false) return;
         RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position + new Vector3(0, 4, 0), Camera.main.transform.forward, out hit, 30f))
+        if (Physics.Raycast(Camera.main.transform.position + new Vector3(0, 4, 0), Camera.main.transform.forward, out hit, CameraMovement.rayDist))
         {
             debugBall.transform.position = hit.point;
             if (hit.collider.CompareTag("BuildArea"))
