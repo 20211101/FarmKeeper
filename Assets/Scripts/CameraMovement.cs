@@ -12,7 +12,7 @@ public class CameraMovement : MonoBehaviour
     float distanceMinOffset = 1;
     // 시작 시 재초기화, 이후 대입 없음
     float distanceMaxOffset = 10;
-    float xMoveOffset = 200f;
+    float xMoveOffset = 400f;
     float yMoveOffset = 150f;
     const float yMoveMin = -45;
     const float yMoveMax = 45f;
@@ -21,7 +21,7 @@ public class CameraMovement : MonoBehaviour
 
     private void Awake()
     {
-        distanceOffset = Vector3.Distance(Vector3.zero, new Vector3(0,6.59f,-10));
+        distanceOffset = Vector3.Distance(Vector3.zero, new Vector3(0,6.59f,-10)) + 5;
         distanceMaxOffset = distanceOffset;
     }
 
@@ -36,14 +36,15 @@ public class CameraMovement : MonoBehaviour
     void XRotate()
     {
         float movX = Input.GetAxis("Mouse X");
-
+        Debug.Log(movX);
+        Debug.Log(movX);
         if (movX > 0)
         {
-            transform.Rotate(new Vector3(0, Time.deltaTime * xMoveOffset, 0), Space.World);
+            transform.Rotate(new Vector3(0, Time.deltaTime * xMoveOffset * movX, 0), Space.World);
         }
         else if (movX < 0)
         {
-            transform.Rotate(new Vector3(0, -Time.deltaTime * xMoveOffset, 0), Space.World);
+            transform.Rotate(new Vector3(0, Time.deltaTime * xMoveOffset * movX, 0), Space.World);
         }
     }
     void YRotate()
