@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c383c0d7547e0904cadd16295f6add18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  responeTime: 30
+  responeTime: 220
   treeResourcePrefab: {fileID: 1277703196394494312, guid: 7d680293fe163a44a84e3fcfa5cd41a3, type: 3}
   spawnPoint: {fileID: 6438078738550392822}
   respawnCanvas: {fileID: 1383246656419672577}

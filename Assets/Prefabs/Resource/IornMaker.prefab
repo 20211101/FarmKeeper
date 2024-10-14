@@ -491,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d96d5fae0f845034e9300cc7bc3f3949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  responeTime: 120
+  responeTime: 240
   steelResourcePrefab: {fileID: 8331843832183545330, guid: 1c1b471c0756f7349b6b60d8c67ed447, type: 3}
   spawnPoint: {fileID: 5013126591990257083}
   renderers:
