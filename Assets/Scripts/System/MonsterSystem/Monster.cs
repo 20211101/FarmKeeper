@@ -15,8 +15,8 @@ public class Monster : Damagable
     public enum MonsterHP
     {
         MOUSE = 10,
-        MOLE = 20,
-        RABBIT = 30
+        MOLE = 30,
+        RABBIT = 20
     }
     public enum MonsterMeatAmount
     {

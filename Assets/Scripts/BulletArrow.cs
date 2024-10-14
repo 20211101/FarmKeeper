@@ -6,7 +6,7 @@ public class BulletArrow : MonoBehaviour
 {
     [SerializeField]
     Rigidbody rigid;
-    int bulletDamage = 2;
+    int bulletDamage = 3;
     public GameObject maker;
     private void OnEnable()
     {
