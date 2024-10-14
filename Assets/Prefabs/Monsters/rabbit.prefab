@@ -505,6 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac48a33b44ecd0c449def529f55fe037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedIngagement: 1
 --- !u!114 &8181096442638605957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -535,6 +536,8 @@ MonoBehaviour:
     delay: 0
   type: 2
   minimapMark: {fileID: 4286496365579898405}
+  meat: {fileID: 1246359668773446005, guid: 6018e197238e9fd42a0eb0db072447c1, type: 3}
+  leather: {fileID: 1246359668773446005, guid: 099769ebfca046141b3863d9cb37db6b, type: 3}
   target: {fileID: 0}
 --- !u!95 &5471271353099368448
 Animator:

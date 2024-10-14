@@ -20,9 +20,15 @@ public class Monster : Damagable
     }
     public enum MonsterMeatAmount
     {
-        MOUSE = 10,
-        MOLE = 12,
-        RABBIT = 15
+        MOUSE = 1,
+        MOLE = 1,
+        RABBIT = 1
+    }
+    public enum MonsterLeatherAmount
+    {
+        MOUSE = 2,
+        MOLE = 2,
+        RABBIT = 2
     }
 
     public SpawnInfo_Spawner spawnInfo;

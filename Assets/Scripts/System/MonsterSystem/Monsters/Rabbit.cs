@@ -15,6 +15,10 @@ public class Rabbit : Monster
 
     [SerializeField]
     GameObject minimapMark;
+    [SerializeField]
+    GameObject meat;
+    [SerializeField]
+    GameObject leather;
 
     State state = State.Moving;
 
@@ -161,6 +165,9 @@ public class Rabbit : Monster
             m.material.color = Color.red;
         if (hp <= 0)
         {
+            Instantiate(meat, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+            Instantiate(leather, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+            Instantiate(leather, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
             isDying = true;
             runAwayFlag = false;
             anim.SetBool("IsDead", true);

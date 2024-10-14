@@ -15,6 +15,10 @@ public class Mole : Monster
 
     [SerializeField]
     GameObject minimapMark;
+    [SerializeField]
+    GameObject meat;
+    [SerializeField]
+    GameObject leather;
 
     State state = State.Moving;
 
@@ -166,6 +170,9 @@ public class Mole : Monster
 
         if (hp <= 0)
         {
+            Instantiate(meat, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+            Instantiate(leather, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
+            Instantiate(leather, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
             isDying = true;
             anim.SetBool("IsDead", true);
             colider.enabled = false;

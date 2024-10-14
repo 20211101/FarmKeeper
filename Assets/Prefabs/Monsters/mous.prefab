@@ -221,8 +221,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76ebf0f089a4844eb6c0aa32f01c03a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnInfo:
+    movingRoot: 0
+    type: 0
+    delay: 0
   type: 0
   minimapMark: {fileID: 4332745415626243}
+  meat: {fileID: 1246359668773446005, guid: 6018e197238e9fd42a0eb0db072447c1, type: 3}
+  leather: {fileID: 1246359668773446005, guid: 099769ebfca046141b3863d9cb37db6b, type: 3}
   target: {fileID: 0}
 --- !u!114 &5339919108241476503
 MonoBehaviour:
@@ -236,6 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2876bc9b20c3268438a42330b62f3af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedIngagement: 1
 --- !u!95 &7142054695248975588
 Animator:
   serializedVersion: 5
