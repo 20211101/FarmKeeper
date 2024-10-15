@@ -23031,8 +23031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sun: {fileID: 705507994}
-  MORNING_TIME: 30
-  NIGHT_TIME: 100
+  MORNING_TIME: 20
+  NIGHT_TIME: 120
   skyboxNight: {fileID: 2100000, guid: 3876d0e183013044aab5adba683217d7, type: 2}
 --- !u!4 &542616780
 Transform:
@@ -23537,7 +23537,7 @@ MonoBehaviour:
     infoSpawner:
       movingRoot: 1
       type: 1
-      delay: 1
+      delay: 0.5
   spawnInfo2:
   - spawnerIdx: 1
     spawnAmount: 7
@@ -47218,7 +47218,7 @@ MonoBehaviour:
     resourceCount: 1
     cost:
     - type: 5
-      cnt: 1
+      cnt: 10
   description: "\uCF54\uC778\uC73C\uB85C \uCCA0\uC744 \uAD6C\uB9E4\uD569\uB2C8\uB2E4."
 --- !u!4 &1093409502 stripped
 Transform:
