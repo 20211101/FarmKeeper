@@ -10,7 +10,7 @@ public class BulletAir : MonoBehaviour
     public GameObject maker;
     private void OnEnable()
     {
-        rigid.velocity = (transform.forward  * 20);
+        rigid.velocity = (transform.forward  * 60);
         StartCoroutine(nameof(ReturnPool));
     }
 

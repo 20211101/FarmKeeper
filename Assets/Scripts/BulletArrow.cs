@@ -10,7 +10,7 @@ public class BulletArrow : MonoBehaviour
     public GameObject maker;
     private void OnEnable()
     {
-        rigid.velocity = (transform.forward * 40);
+        rigid.velocity = (transform.forward * 140);
         StartCoroutine(nameof(ReturnPool));
     }
 

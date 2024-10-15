@@ -10,7 +10,7 @@ public class Bullet_Rock : MonoBehaviour
     public GameObject maker;
     private void OnEnable()
     {
-        rigid.velocity = (transform.forward * 40);
+        rigid.velocity = (transform.forward * 60);
         StartCoroutine(nameof(ReturnPool));
     }
 

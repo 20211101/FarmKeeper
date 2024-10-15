@@ -200,7 +200,7 @@ MonoBehaviour:
   stoneResourcePrefab: {fileID: 1246359668773446005, guid: 6f3adccdd737bd541bd5c257038b0283, type: 3}
   steelResourcePrefab: {fileID: 8331843832183545330, guid: 1c1b471c0756f7349b6b60d8c67ed447, type: 3}
   spawnPoint: {fileID: 7122380850775833318}
-  steelDropPercent: 10
+  steelDropPercent: 5
   respawnCanvas: {fileID: 5100631105286591336}
 --- !u!1 &5100631105286591336
 GameObject:
