@@ -5,7 +5,7 @@ using UnityEngine;
 public class Weapon_Club_HitBox : MonoBehaviour
 {
     PlayerInventory playerInventory;
-    int damage = 1;
+    int damage = 4;
     private void Awake()
     {
         playerInventory = GetComponentInParent<PlayerInventory>();
