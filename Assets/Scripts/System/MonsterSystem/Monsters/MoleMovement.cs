@@ -7,7 +7,7 @@ public class MoleMovement : Movement
     Mole mole;
     Rigidbody rigid;
 
-    int _speed = 6;
+    int _speed = 8;
     float speed { get => _speed * speedIngagement; }
 
     Transform[] paths;
