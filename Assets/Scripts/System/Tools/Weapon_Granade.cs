@@ -14,7 +14,7 @@ public class Weapon_Granade : Tool
 
     private void Start()
     {
-        toolCnt = _toolCnt;
+        InventoryToolPannelUI.instance.ChangeToolCount((int)toolType, _toolCnt);
         anim = GetComponent<Animator>();
     }
 

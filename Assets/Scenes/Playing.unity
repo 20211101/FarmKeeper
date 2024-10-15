@@ -86028,7 +86028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolType: 2
-  _toolCnt: 0
+  _toolCnt: 2
   Granade: {fileID: 5096438859851336295, guid: 5ca6e5fdfea9375459ad538db4f1e2fe, type: 3}
   SpawnPos: {fileID: 1675849447}
 --- !u!114 &1796782753
@@ -86044,7 +86044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toolType: 3
-  _toolCnt: 0
+  _toolCnt: 1
   grid: {fileID: 147263683}
   debugBall: {fileID: 1500015509}
   Turret: {fileID: 7524180990074437472, guid: 97da1c77608509845acfe3a8ec790e4c, type: 3}

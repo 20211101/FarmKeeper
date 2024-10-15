@@ -19,8 +19,9 @@ public class Weapon_Spear : Tool
 
     private void Start()
     {
-        toolCnt = _toolCnt;
+        InventoryToolPannelUI.instance.ChangeToolCount((int)toolType, _toolCnt);
     }
+
 
     public override void Action()
     {

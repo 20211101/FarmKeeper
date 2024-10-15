@@ -7,6 +7,11 @@ public class Potion_Tool : Tool
     [SerializeField] GameObject healEffect;
     int healAmount = 20;
 
+    private void Start()
+    {
+        InventoryToolPannelUI.instance.ChangeToolCount((int)toolType, _toolCnt);
+    }
+
     public override void Action()
     {
         StopCoroutine("EffectOff");

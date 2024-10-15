@@ -14,6 +14,10 @@ public class RestoreKit_Tool : Tool
     {
         anim = GetComponent<Animator>();
     }
+    private void Start()
+    {
+        InventoryToolPannelUI.instance.ChangeToolCount((int)toolType, _toolCnt);
+    }
 
     public override void Action()
     {

@@ -16,6 +16,11 @@ public class Weapon_Club : Tool
         anim = GetComponent<Animator>();
     }
 
+    private void Start()
+    {
+        toolCnt = 1;
+    }
+
     public override void Action()
     {
         if(hitBox == null)

@@ -15,7 +15,7 @@ public class SlingTurret_Tool : Tool
     bool isOnHand = false;
     private void Start()
     {
-        toolCnt = _toolCnt;
+        InventoryToolPannelUI.instance.ChangeToolCount((int)toolType, _toolCnt);
         grid.SetActive(false);
         debugBall.SetActive(false);
         Turret.SetActive(false);
