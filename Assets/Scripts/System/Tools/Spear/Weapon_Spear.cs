@@ -19,7 +19,7 @@ public class Weapon_Spear : Tool
 
     private void Start()
     {
-        toolCnt =0;
+        toolCnt = _toolCnt;
     }
 
     public override void Action()

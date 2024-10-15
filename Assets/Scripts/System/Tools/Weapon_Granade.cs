@@ -14,6 +14,7 @@ public class Weapon_Granade : Tool
 
     private void Start()
     {
+        toolCnt = _toolCnt;
         anim = GetComponent<Animator>();
     }
 
