@@ -16352,6 +16352,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7924785898085168855, guid: 66b2d80c5f4917f40b3e0ec41983cdc2, type: 3}
   m_PrefabInstance: {fileID: 401932133}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &403947545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403947546}
+  m_Layer: 0
+  m_Name: MoveSpot_A_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &403947546
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403947545}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -34.3, y: -0.075, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1346713036}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404560684
 GameObject:
   m_ObjectHideFlags: 0
@@ -23115,6 +23146,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 544795148}
   m_CullTransparentMesh: 1
+--- !u!1 &545681935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 545681936}
+  m_Layer: 0
+  m_Name: MoveSpot_A_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &545681936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545681935}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 44.68, y: -0.075, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1346713036}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &545790941 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7924785898085168855, guid: 66b2d80c5f4917f40b3e0ec41983cdc2, type: 3}
@@ -59827,6 +59889,8 @@ Transform:
   - {fileID: 1227544421}
   - {fileID: 1972901876}
   - {fileID: 442092855}
+  - {fileID: 403947546}
+  - {fileID: 545681936}
   - {fileID: 805529852}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -88056,6 +88120,7 @@ MonoBehaviour:
   - {fileID: 1227544421}
   - {fileID: 805529852}
   path2:
+  - {fileID: 403947546}
   - {fileID: 442092855}
   - {fileID: 805529852}
   spawnPos: {fileID: 693758314}
@@ -100294,6 +100359,7 @@ MonoBehaviour:
   - {fileID: 1227544421}
   - {fileID: 805529852}
   path2:
+  - {fileID: 545681936}
   - {fileID: 1972901876}
   - {fileID: 805529852}
   spawnPos: {fileID: 942216538}

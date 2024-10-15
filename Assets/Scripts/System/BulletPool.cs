@@ -22,7 +22,7 @@ public class BulletPool : MonoBehaviour
 
     Vector3 tempPos = new Vector3(float.MaxValue, float.MaxValue, float.MaxValue);
 
-    int MAX_SIZE= 100;
+    int MAX_SIZE= 200;
     Stack<GameObject> arrowPool = new Stack<GameObject>(100);
     Stack<GameObject> rockPool = new Stack<GameObject>(100);
     Stack<GameObject> airPool = new Stack<GameObject>(1000);
@@ -55,16 +55,34 @@ public class BulletPool : MonoBehaviour
         switch (t)
         {
             case BulletType.Rock:
-                if (rockPool.Count < 1) return null;
+                if (rockPool.Count < 1)
+                {
+                    GameObject temp = Instantiate(bullet_rock, tempPos, Quaternion.identity);
+                    temp.SetActive(false);
+                    rockPool.Push(temp);
+                    return rockPool.Pop();
+                }
                 else
                     return rockPool.Pop();
                 
             case BulletType.Arrow:
-                if (arrowPool.Count < 1) return null;
+                if (arrowPool.Count < 1)
+                {
+                    GameObject temp = Instantiate(bullet_arrow, tempPos, Quaternion.identity);
+                    temp.SetActive(false);
+                    arrowPool.Push(temp); 
+                    return arrowPool.Pop();
+                }
                 else
                     return arrowPool.Pop();
             case BulletType.Air:
-                if (airPool.Count < 1) return null;
+                if (airPool.Count < 1)
+                {
+                    GameObject temp = Instantiate(bullet_air, tempPos, Quaternion.identity);
+                    temp.SetActive(false);
+                    airPool.Push(temp);
+                    return airPool.Pop();
+                }
                 else
                 {
                     Debug.Log("POP");

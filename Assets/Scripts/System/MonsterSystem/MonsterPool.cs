@@ -9,7 +9,7 @@ public class MonsterPool : MonoBehaviour
     private static MonsterPool _instance;
     public static MonsterPool instance { get { return _instance; } private set { } }
 
-    const int MAXIMUM_POOL = 50;
+    const int MAXIMUM_POOL = 100;
 
     [SerializeField] GameObject mouse;
     [SerializeField] GameObject mole;
