@@ -81566,9 +81566,9 @@ MonoBehaviour:
     resourceCount: 0
     cost:
     - type: 0
-      cnt: 5
+      cnt: 4
     - type: 1
-      cnt: 2
+      cnt: 3
   description: "\uB3CC\uC744 \uBC1C\uC0AC\uD569\uB2C8\uB2E4."
 --- !u!1001 &1699635573
 PrefabInstance:
@@ -101040,10 +101040,10 @@ MonoBehaviour:
     toolName: "\uBAA9\uC7AC"
     toolType: 5
     resourceType: 0
-    resourceCount: 3
+    resourceCount: 1
     cost:
     - type: 5
-      cnt: 1
+      cnt: 3
   description: "\uCF54\uC778\uC73C\uB85C \uBAA9\uC7AC\uB97C \uAD6C\uB9E4\uD569\uB2C8\uB2E4."
 --- !u!1001 &2110671136
 PrefabInstance:
