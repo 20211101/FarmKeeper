@@ -51,7 +51,7 @@ public class RestoreKit_Tool : Tool
     public void Restore()
     {
         RaycastHit hit;
-        if(Physics.BoxCast(transform.position, Vector3.one, transform.forward, out hit, transform.rotation, 1.5f, (1 << 10)))
+        if(Physics.BoxCast(transform.position, Vector3.one * 3, transform.forward, out hit, transform.rotation, 1.5f, (1 << 10)))
         {
             hit.transform.GetComponent<Damagable>().Heal(healAmount);
             toolCnt--;

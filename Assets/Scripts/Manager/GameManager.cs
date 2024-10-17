@@ -30,12 +30,14 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         timer = Timer.instance;
-        GameStart();
+        Player.SetActive(false);
     }
 
-    private void GameStart()
+    public void GameStart()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         timer.StartInGameTime();
+        Player.SetActive(true);
     }
 
     public void GameOver()

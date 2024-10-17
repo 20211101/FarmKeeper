@@ -139,6 +139,10 @@ public class RabbitMovement : Movement
         transform.rotation = Quaternion.Euler(0, yAngle, 0);
         rigid.velocity = dir * speed;
     }
+    public void Pushed()
+    {
+        rigid.AddForce(rabbit.PushVec * 5, ForceMode.Impulse);
+    }
 
     public void ChangeTargetPath()
     {

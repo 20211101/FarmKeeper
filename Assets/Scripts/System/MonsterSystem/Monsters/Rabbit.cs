@@ -37,6 +37,8 @@ public class Rabbit : Monster
 
     bool runAwayFlag = false;
 
+    Vector3 pushVec = Vector3.zero;
+    public Vector3 PushVec { get => pushVec; }
     private void Awake()
     {
         type = MonsterType.RABBIT;
@@ -198,5 +200,19 @@ public class Rabbit : Monster
     {
         if (isDying == true) return;
         runAwayFlag = true;
+    }
+
+    public override void Push(Vector3 dir)
+    {
+        StopCoroutine("PushEnd");
+        pushVec = dir;
+        rabbitMovement.Pushed();
+        StartCoroutine("PushEnd");
+    }
+
+    IEnumerator PushEnd()
+    {
+        yield return new WaitForSeconds(0.5f);
+        pushVec = Vector3.zero;
     }
 }

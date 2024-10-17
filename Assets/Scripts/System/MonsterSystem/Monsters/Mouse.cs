@@ -37,6 +37,8 @@ public class Mouse : Monster
 
     bool runAwayFlag = false;
 
+    Vector3 pushVec = Vector3.zero;
+    public Vector3 PushVec { get => pushVec; }
     private void Awake()
     {
         type = MonsterType.MOUSE;
@@ -165,6 +167,7 @@ public class Mouse : Monster
             m.material.color = Color.red;
         if(hp <= 0)
         {
+            SoundPlayer.instance.PlayRatDeadSound();
             Instantiate(meat, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
             Instantiate(leather, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
             Instantiate(leather, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
@@ -198,5 +201,19 @@ public class Mouse : Monster
     {
         if (isDying == true) return;
         runAwayFlag = true;
+    }
+
+    public override void Push(Vector3 dir)
+    {
+        StopCoroutine("PushEnd");
+        pushVec = dir;
+        mouseMovement.Pushed();
+        StartCoroutine("PushEnd");
+    }
+
+    IEnumerator PushEnd()
+    {
+        yield return new WaitForSeconds(0.5f);
+        pushVec = Vector3.zero;
     }
 }

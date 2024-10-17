@@ -24,6 +24,7 @@ public class BulletMortar : MonoBehaviour
     {
         if(other.CompareTag("Terrain"))
         {
+            SoundPlayer.instance.PlayExplosionSound();
             Instantiate(explodeEffect, transform.position + new Vector3(0,1,0), Quaternion.identity);
             Collider[] colliders = Physics.OverlapSphere(transform.position, radious, 1<<9);
             foreach(Collider c in colliders)

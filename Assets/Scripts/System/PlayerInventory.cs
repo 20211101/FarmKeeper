@@ -53,6 +53,7 @@ public class PlayerInventory : MonoBehaviour
     {
         if (hit.transform.CompareTag("ResourcePrab"))
         {
+            SoundPlayer.instance.PlayGainSound();
             GetResource(hit.transform.GetComponent<ResourcePickUp>().resource);
             Destroy(hit.gameObject);
         }

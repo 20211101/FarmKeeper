@@ -70,6 +70,7 @@ public class BowTurret : Structure
     }
     public void Attack()
     {
+        SoundPlayer.instance.PlayShootSound();
         GameObject bullet = BulletPool.instance.SendBullet(BulletType.Arrow);
         bullet.transform.position = spawnPos.transform.position;
         bullet.transform.rotation = zAxis.transform.rotation;

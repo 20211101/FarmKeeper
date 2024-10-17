@@ -20,8 +20,8 @@ public class Iorn : ResourceOrigin
     public override void Damaged(PlayerInventory playerInventory)
     {
         Debug.Log("돌을 때렸습니다.");
-            DropSteelResource();
-
+        DropSteelResource();
+        SoundPlayer.instance.PlayResourceHitSound();
         StartCoroutine(nameof(ScaleMove));
     }
 

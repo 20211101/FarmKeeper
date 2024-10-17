@@ -51,6 +51,7 @@ public class Weapon_Club : Tool
     // 애니메이션 이벤트로 호출
     public void ActiveHitBox()
     {
+        SoundPlayer.instance.PlayAtkSound();
         hitBox.SetActive(true);
         StartCoroutine(nameof(OffBox));
     }

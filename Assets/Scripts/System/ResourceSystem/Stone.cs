@@ -20,6 +20,7 @@ public class Stone : ResourceOrigin
 
     public override void Damaged(PlayerInventory playerInventory)
     {
+        SoundPlayer.instance.PlayResourceHitSound();
         Debug.Log("돌을 때렸습니다.");
         DropStoneResource(); // 돌 자원 드롭
 

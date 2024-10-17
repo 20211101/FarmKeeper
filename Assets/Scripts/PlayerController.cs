@@ -19,8 +19,14 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         cam = Camera.main;
     }
-
-
+    public void FootR()
+    {
+        SoundPlayer.instance.PlayWalkSound();
+    }
+    public void FootL()
+    {
+        SoundPlayer.instance.PlayWalkSound();
+    }
     Vector3 groundDir;
     public LayerMask msk;
     void Update()

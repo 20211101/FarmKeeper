@@ -34,6 +34,8 @@ public class CreateToolManager : MonoBehaviour
             inventory.resources[(int)i.type].cnt -= i.cnt;
         }
 
+        SoundPlayer.instance.PlayGoldSound();
+
         if(showingTool.Recipy.recipyT == RecipyType.Tool)
             inventory.MakeTool(showingTool.Recipy.toolType);
         else

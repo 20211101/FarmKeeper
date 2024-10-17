@@ -170,6 +170,7 @@ public class Mole : Monster
 
         if (hp <= 0)
         {
+            SoundPlayer.instance.PlayMoleDeadSound();
             Instantiate(meat, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
             Instantiate(leather, transform.position + new Vector3(0, 2, 0), Quaternion.identity);
             Instantiate(leather, transform.position + new Vector3(0, 2, 0), Quaternion.identity);

@@ -13,6 +13,7 @@ public class C4 : MonoBehaviour
     }
     public void Boom()
     {
+        SoundPlayer.instance.PlayExplosionSound();
         boomEffect.SetActive(true);
         GetComponent<MeshRenderer>().enabled = false;
         Collider[] colliders = Physics.OverlapSphere(transform.position, 20, 1 << 12);

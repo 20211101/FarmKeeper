@@ -84,6 +84,8 @@ public class MortarTurret : Structure
     void Attack()
     {
         if (canAttack == false) return;
+        SoundPlayer.instance.PlayShootSound();
+        SoundPlayer.instance.PlayShootSound();
         canAttack = false;
         GameObject g = Instantiate(bullet, bulletSpawnPos.transform.position, bulletSpawnDir.transform.rotation);
         g.GetComponent<BulletMortar>().maker = gameObject;

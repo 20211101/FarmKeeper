@@ -58,6 +58,10 @@ public class MouseMovement : Movement
         transform.rotation = Quaternion.Euler(0, yAngle, 0);
         rigid.velocity = dir * speed;
     }
+    public void Pushed()
+    {
+        rigid.AddForce(mouse.PushVec * 5, ForceMode.Impulse);
+    }
 
     public void ChangeTargetPath()
     {

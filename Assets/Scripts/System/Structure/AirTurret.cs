@@ -73,8 +73,8 @@ public class AirTurret : Structure
                                         + new Vector3(Random.Range(-30, -10), Random.Range(-5f, 5), 0));
             bullet.SetActive(true);
             bullet.GetComponent<BulletAir>().maker = gameObject;
+            SoundPlayer.instance.PlayShootSound();
         }
-
         StartCoroutine("Wait");
     }
 

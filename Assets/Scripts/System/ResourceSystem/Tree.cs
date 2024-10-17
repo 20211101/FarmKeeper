@@ -16,6 +16,7 @@ public class Tree : ResourceOrigin
     }
     public override void Damaged(PlayerInventory playerInventory)
     {
+        SoundPlayer.instance.PlayResourceHitSound();
         Debug.Log("나무를 때렸습니다.");
         DropWoodResource(); // 나무 자원 드롭
         StartCoroutine(nameof(ScaleMove));

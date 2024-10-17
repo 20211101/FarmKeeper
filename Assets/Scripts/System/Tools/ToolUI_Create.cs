@@ -23,6 +23,7 @@ public class ToolUI_Create : MonoBehaviour,IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        SoundPlayer.instance.PlayBtnSound();
         manager.ShowInfo(this);
     }
 }
