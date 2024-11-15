@@ -22,7 +22,7 @@ Material:
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _Outline_Color
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -195,7 +195,7 @@ Material:
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
     - _Offset_Z: 0
-    - _Outline_Width: 1
+    - _Outline_Width: 2
     - _Parallax: 0.02
     - _RimLight: 0
     - _RimLight_FeatherOff: 0
